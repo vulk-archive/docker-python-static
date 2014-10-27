@@ -14,4 +14,3 @@ RUN make -f Static.make ;\
     make install;\
 		mkdir -p /build/src
 WORKDIR /build/src
-ONBUILD ADD . /build/src
