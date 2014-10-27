@@ -1,0 +1,23 @@
+_ctypes _ctypes/_ctypes.c _ctypes/callbacks.c _ctypes/callproc.c _ctypes/cfield.c _ctypes/malloc_closure.c _ctypes/stgdict.c -lffi
+readline readline.c -lreadline -ltermcap
+_io -I$(srcdir)/Modules/_io _io/bufferedio.c _io/bytesio.c _io/fileio.c _io/iobase.c _io/_iomodule.c _io/stringio.c _io/textio.c
+_socket socketmodule.c timemodule.c 
+_ssl _ssl.c -DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
+_hashlib _hashopenssl.c -DUSE_SSL -I/usr/include/openssl -lssl -lcrypto
+bz2 bz2module.c  -lbz2
+_md5 md5module.c md5.c
+_sha shamodule.c
+_sha256 sha256module.c
+_sha512 sha512module.c
+binascii binascii.c
+parser parsermodule.c
+cStringIO cStringIO.c
+cPickle cPickle.c
+zlib zlibmodule.c -I$(prefix)/include -L$(exec_prefix)/lib -lz
+pyexpat expat/xmlparse.c expat/xmlrole.c expat/xmltok.c pyexpat.c -I$(srcdir)/Modules/expat -DHAVE_EXPAT_CONFIG_H -DUSE_PYEXPAT_CAPI
+xxsubtype xxsubtype.c -ldl
+strop stropmodule.c
+future_builtins future_builtins.c
+fcntl fcntlmodule.c
+select selectmodule.c
+grp grpmodule.c
