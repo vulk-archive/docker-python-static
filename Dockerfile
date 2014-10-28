@@ -10,6 +10,7 @@ RUN cp /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o /usr/lib/gcc/x86_64-linux-g
 
 ADD Static.make StaticSetup add_builtins.py /usr/src/python/
 ENV PATH /usr/local/python-static/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WORKDIR /usr/src/python/
 RUN make -f Static.make ;\
 	  ldd /usr/local/python-static/bin/python ;\
 		mkdir -p /build/src
