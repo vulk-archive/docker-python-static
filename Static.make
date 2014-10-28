@@ -7,7 +7,7 @@ PYTHON=python
 PREFIX=/usr/local/python-static
 #PREFIX=/usr/local
 CONF_ARGS=
-MAKE_ARGS=-j 6
+MAKE_ARGS=-j 6 install
 BUILTINS=
 # removed _datetime and renamed _operator to operator
 override BUILTINS+= array cmath math _struct time operator _random _collections _heapq itertools _functools _elementtree pickle _bisect unicodedata atexit _weakref datetime
