@@ -8,7 +8,7 @@ RUN easy_install cython
 # http://askubuntu.com/questions/530617/how-to-make-a-static-binary-of-coreutils/530647#530647
 RUN cp /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/4.9/crtbeginT.o
 
-ADD Static.make StaticSetup add_builtins.py /usr/src/python/
+ADD . /usr/src/python/
 ENV PATH /usr/local/python-static/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 WORKDIR /usr/src/python/
 RUN make -f Static.make ;\
